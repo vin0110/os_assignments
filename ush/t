@@ -1,0 +1,31 @@
+armadillo% a b c d e f
+Begin pipe
+  Cmd #1: a [1:b,2:c,3:d,4:e,5:f]
+End pipe
+armadillo% a < b > c
+Begin pipe
+  Cmd #1: a <(b) >(c)
+End pipe
+armadillo% a > b < c
+Begin pipe
+  Cmd #1: a <(c) >(b)
+End pipe
+armadillo% a | b | c
+Begin pipe
+  Cmd #1: a
+  Cmd #2: b
+  Cmd #3: c
+End pipe
+armadillo% a b < c | d e f | g h > i
+Begin pipe
+  Cmd #1: a <(c) [1:b]
+  Cmd #2: d [1:e,2:f]
+  Cmd #3: g >(i) [1:h]
+End pipe
+armadillo% a > b > c
+Ambiguous output redirect.
+armadillo% a > b | c
+Ambiguous output redirect.
+armadillo% a | b < c
+Ambiguous input redirect.
+armadillo%
