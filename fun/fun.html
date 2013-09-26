@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+<HEAD>
+<TITLE>Homework X</TITLE>
+</HEAD>
+<BODY>
+<h1>CSC 501 Homework X: Fun with memory</h1>
+<hr>
+<h3>Assignment:</h3>
+
+Conduct some experiments to understand the memory subsystem.
+
+<hr>
+<h3>Due:</h3>  
+See home
+<a href="../csc501.html">page</a>.
+<hr>
+
+<h3>Description:</h3>
+
+Your assignment is to learn about the Unix memory system by creating
+and running several experiments.
+This assignment has a written part and a programming part.
+You will develop experiments (i.e., programs) that will help answer
+the following questions.
+<p>
+The answers to all questions below (probably) can be found with a
+little research.
+But this assignment is to find the answer <em>empirically</em>&shy;by
+experiementation.
+You are graded in part for a correct answer.
+But the primary grading criterion is a correct experiment.
+<p>
+Be careful with your programs, and be respectful of other people.
+You will be writing programs the blow the stack, consume all virtual
+or physical memory, etc.
+Moreover, you will be conducting these experiments on community
+machine.
+These programs are likely to annoy other users.
+Please pick times and machines in order to reduce the negative impact
+running your programs will have on others.
+Use the <i>w(1)</i> command to determine who is on your machine.
+<ol>
+  <li><strong>Address space layout:</strong>  
+      These questions pertain to the user's
+      address space&shy;ie, the virtual address)?
+      <br>
+      [30 pts]
+      <ol type=a>
+	<li>Where is the stack located?
+	<li>At what address is the <em>main</em> routine located?
+	<li>Where is the heap located (ie, <em>malloc</em>'d storage)?
+	<li>Where is code from a dynamic library located?
+	<li>Where is data from a dynamic library located?
+	<li>Where in the virtual address space is a
+	    memory-mapped file placed?
+      </ol>
+
+  <li><strong>Heap storage:</strong> This is the storage allocated by
+      <em>malloc</em>. 
+      In this question, <em>allocated</em> means &ldquo;assign by
+      <em>malloc</em>.&rdquo;
+      In other words, if <kbd>malloc(nbytes)</kbd> returns
+      successfully, then <kbd>nbytes</kbd> have been allocated.
+      <br>
+      [20 pts]
+      <ol type=a>
+	<li>Explain why the execution time of <em>malloc</em> is not
+	    proportional to the amount of memory allocated.<br>
+	    Ie, explain why <tt>malloc(1&lt;&lt;20)</tt> does not take 10
+	    orders of magnitude longer than <tt>malloc(1&lt;&lt;10)</tt>.
+	    To help answer this question figure about what happens to a
+	    <i>malloc</i>'d page when it is first touched.
+	<li>How much memory can be allocated to a process?<br>
+	    (Do not answer this based on memory fragmentation.)
+      </ol>
+
+  <li><strong>Memory sizes: </strong>
+      Determine <i>experimentally</i> the sizes of
+      various entities in the system.
+      <br>
+      [50 pts]
+
+      <ol type=a>
+        <li>Number of caches
+	<li>Cache word size (for each cache)
+	<li>Cache size (for each cache)
+	<li>Physical memory
+	<li><strong>EXTRA CREDIT: </strong>Cache associativity (for
+	    any cache) [10 pts]
+      </ol>
+</ol>
+<hr>
+<h3>Turn In:</h3>
+Be sure to turnin <b>all</b> the files you need.
+You must include a <tt>Makefile</tt> that creates as many executable
+files as necessary.
+Name your executables <kbd>progAB</kbd>, where <kbd>AB</kbd> is the
+question number (eg, 1a).
+If a program is used for more than one question, use good judgement in
+naming the program.
+<p>
+Also, denote any resources you used--including other students--in a file
+named <b>REFERENCES</b>.
+<p>
+Finally, if necessary turnin a <strong>README</strong> file that
+explains which programs answer which questions.
+
+<HR>
+<h3>Resources:</h3>
+Man pages
+<ul>
+  <li>malloc(3)
+  <li>brk(2), sbrk(2)
+  <li>mmap(2)
+  <li>proc(5)
+</ul>
+<hr>
+<h3>Testing:</h3>
+The several programs you've created will be compiled and tested on one
+or more of the EOS Linux machines
+Several configurations will be tested.
+
+<hr>
+<h3>Grading:</h3>
+
+The weighting of this assignment is given in
+<a href="../policies.html#grading">policies</a>. 
+<p>
+The are many ways to correctly answer the above questions.
+You could read books and articles.
+You could read the source code.
+Or you could write programs and experimentally deduce what is
+happening.
+<p>
+Regardless of how you figure out the answers, you will be graded
+on the experiments that you've constructed.
+You must first explain the experiment.
+Then discuss the results.
+For full credit, the question must be correctly answered <b>and</b>
+the experiment(s) must provide the information necessary to deduce the
+answer.
+
+<hr>
+<a href="cse542.html"><img src="gif/home.gif"></a>
+<address>
+<a href="mailto:vin@nd.edu">vin@nd.edu</a><br>
+<!-- hhmts start -->
+Last modified: Mon Oct 16 11:18:02 EDT 2006
+<!-- hhmts end -->
+</BODY>
+</HTML>
