@@ -223,6 +223,8 @@ static Pipe mkPipe()
   while ( PipeToken(LA) ) {
     if ( LA == TpipeErr )
       p->type = PoutErr;	// reset type
+    else if(LA == Tpipe)
+      p->type = Pout;     //reset type
     if ( c->out != Tnil ) {
       printf("Ambiguous output redirect.\n");
       // skip to end of command
@@ -231,7 +233,8 @@ static Pipe mkPipe()
       } while ( !EndOfInput(LA) );
       freeCmd(c);
       return NULL;
-    }
+    } else
+      c->out = p->type == Pout ? Tpipe : TpipeErr;
     Next();
     c->next = mkCmd(p->type == Pout ? Tpipe : TpipeErr);
     if ( c->next == NULL || c->next == &Empty ) {
