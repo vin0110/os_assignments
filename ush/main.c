@@ -34,6 +34,12 @@ static void prCmd(Cmd c)
       case TappErr:
 	printf(">>&(%s) ", c->outfile);
 	break;
+      case Tpipe:
+	printf("| ");
+	break;
+      case TpipeErr:
+	printf("|& ");
+	break;
       default:
 	fprintf(stderr, "Shouldn't get here\n");
 	exit(-1);
