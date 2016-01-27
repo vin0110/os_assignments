@@ -1,0 +1,3 @@
+Create Semaphore
+w0 wait
+Destroy Semaphore

@@ -1,0 +1,14 @@
+Create Semaphore
+w0 wait
+w1 wait
+w2 wait
+s0 signal
+s0 end
+w0 end
+s1 signal
+s1 end
+w1 end
+s2 signal
+s2 end
+w2 end
+Destroy Semaphore

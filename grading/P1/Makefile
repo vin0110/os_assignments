@@ -1,0 +1,21 @@
+CC = gcc
+CFLAGS =
+
+lib = mythread.a
+
+testcase_passing = testcase_passing
+testcase_semaphore = testcase_semaphore
+testcase_joinall = testcase_joinall
+
+all: testcase_passing testcase_semaphore testcase_joinall
+testcase_passing:
+	${CC} ${testcase_passing}.c ${lib} -o${testcase_passing} ${CFLAGS}
+testcase_semaphore:
+	${CC} ${testcase_semaphore}.c ${lib} -o${testcase_semaphore} ${CFLAGS}
+testcase_joinall:
+	${CC} ${testcase_joinall}.c ${lib} -o${testcase_joinall} ${CFLAGS}
+
+clean:
+	@rm -rf ${testcase_passing}
+	@rm -rf ${testcase_semaphore}
+	@rm -rf ${testcase_joinall}
