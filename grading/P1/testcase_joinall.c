@@ -2,8 +2,10 @@
 #include "mythread.h"
 #include "assert.h" 
 
+#define EXTRA
+
 int count; 
-int mode; 
+int mode=0; 
 MyThread T; 
 
 void t1(void * who)
@@ -39,7 +41,9 @@ void t1(void * who)
     }
 
     printf("t%d end\n",(int)who);
+#ifndef EXTRA
     MyThreadExit();
+#endif
 }
 
 int main(int argc, char *argv[])
