@@ -1,0 +1,5 @@
+main: pre
+main: before
+main: after
+t1
+main: end

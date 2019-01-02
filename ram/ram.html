@@ -39,7 +39,7 @@ implementations.
 For example, on a read system call the operation system uses NFS code
 if it is an NFS file but uses ext3 code if it is an ext3 file.
 <p>
-<a href="http://fuse.sourceforge.net/">FUSE</a>
+<a href="https://github.com/libfuse/libfuse">FUSE</a>
 (Filesystem in Userspace) is an interface that exports filesystem
 operations to user-space.
 Thus filesystem routines are executed in user-space.
@@ -110,7 +110,7 @@ Include a <tt>Makefile</tt> that creates the appropriate files.
 A appropriate penalty will be assessed if this is not so.
 
 Your Makefile should create an executable program named <b>ramdisk</b>, and this program can accept two parameters:
-1) the directory to mount and 2) the size (MB) of your filesystem.  To be specific, this following coomand
+1) the directory to mount and 2) the size (MB) of your filesystem.  To be specific, this following command
 will be used to mount a ramdisk:
 <blockquote>
 ramdisk /path/to/dir 512
@@ -125,8 +125,8 @@ named <b>REFERENCES</b>.
 <ul>
   <li>FUSE
       <ul>
-	<li><a href="http://fuse.sourceforge.net/">Home page</a>
-	<li><a href="http://fuse.sourceforge.net/wiki/">Wiki</a>
+	<li><a href="https://github.com/libfuse/libfuse">Home page</a>
+	<li><a href="https://en.wikipedia.org/wiki/Filesystem_in_Userspace">Wiki</a>
 	<li><a href="../../fuse.html">FUSE on VCL</a>
       </ul>
   <li>Relevant man pages
@@ -175,7 +175,7 @@ Students that want their program to be graded for extra credit will
 submitted a file named &ldquo;extra-credit-implemented&rdquo;.
 (Please use this exact name so that your assignment does not require
 special handling.)
-Programs written for extra credit will accept an additional and
+Programs written for extra credit will accept an additional,
 optional argument that names a file.
 <blockquote>
 ramdisk &lt;mount_point&gt; &lt;size&gt; [&lt;filename&gt;]

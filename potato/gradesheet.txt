@@ -1,0 +1,34 @@
+---------------------------------------------------------------------
+Name:
+
+---------------------------------------------------------------------
+
+                                        HOPS
+
+Local - (3 players/1 mach)      0       10      100     1000    10,000
+
+Remote - (2 players/3 machs)            10      100     1000    10,000
+
+Remote - (50 players/2 machs)   1
+
+0 players (master only)         __
+
+1 player (master only)          __
+
+Sleep check                     __
+
+Output check                    __
+
+---------------------------------------------------------------------
+Legend:
+
+ /
+v  - Tested OK (that is a checkmark)
+NA - Not applicable  (did not perform test)
+SF - Segmentation fault
+BE - Bus error
+IN - Address already in use (usually returned from bind)
+FE - Floating exception
+CR - Connection refused
+FC - Failed to connect the ring
+NP - Connected, but didn't pass potato
